@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__context7__query-docs",
+      "WebFetch(domain:mantine.dev)",
+      "Bash(pnpm biome:*)",
+      "Bash(pnpm build:*)",
+      "Bash(pnpm format:*)",
+      "Bash(pnpm lint:*)",
+      "mcp__context7__resolve-library-id"
+    ]
+  }
+}
