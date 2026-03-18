@@ -1,5 +1,3 @@
-"use client";
-
 import { Card, Stack } from "@mantine/core";
 import Link from "next/link";
 import type { Post } from "@/types/post-types";

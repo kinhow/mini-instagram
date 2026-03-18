@@ -1,5 +1,3 @@
-"use client";
-
 import { ActionIcon, Text } from "@mantine/core";
 import { Dropzone, IMAGE_MIME_TYPE } from "@mantine/dropzone";
 import Image from "next/image";

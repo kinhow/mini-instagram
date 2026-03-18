@@ -1,5 +1,3 @@
-"use client";
-
 import { Group, Text } from "@mantine/core";
 import { formatRelativeTime } from "@/lib/dayjs/format-time";
 

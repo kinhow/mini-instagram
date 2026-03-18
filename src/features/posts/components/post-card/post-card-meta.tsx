@@ -1,5 +1,3 @@
-"use client";
-
 import { Group, Text } from "@mantine/core";
 import { LikesBadge } from "@/components/likes-badge";
 import { UserAvatar } from "@/components/user-avatar";

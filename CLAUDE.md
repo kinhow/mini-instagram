@@ -82,10 +82,25 @@ src/
 
 ## Coding Conventions
 
-- Biome rules: recommended + Next.js + React domains; `noUnknownAtRules` off (for Tailwind v4 `@theme`), `noArrayIndexKey` off.
-- Use Tailwind utility classes for styling — no CSS modules or inline styles.
-- Prefer named exports; default exports only for Next.js page/layout/error files.
-- Keep components small; extract hooks for data logic.
-- Server components for pages/layouts; client components (`"use client"`) for interactive UI.
+### Component rules
+- Components must be purely presentational — render UI, accept props/callbacks, no inline business logic.
+- No form validation, error mapping, data transformation, or submit handling inside components.
+- Container components may use hooks and manage layout concerns (Suspense, infinite scroll) but delegate data logic to hooks.
+
+### Hook rules
+- All business logic belongs in custom hooks under `features/<feature>/hooks/`.
+- This includes: form setup + validation, submit/mutation handlers, error mapping, state orchestration.
+- Data-fetching hooks return query/mutation objects; form hooks return form state + handlers.
+
+### Export rules
+- Named exports for everything; default exports only for Next.js page/layout/error files.
+
+### Styling rules
+- Use Tailwind utility classes — no CSS modules or inline styles.
 - Use Mantine's `classNames` prop (not `className`) to apply Tailwind utilities to Mantine component internals.
+- Use Mantine CSS variables (e.g., `var(--mantine-color-dimmed)`) for theme-aware colors instead of hardcoded Tailwind colors.
+
+### Other rules
+- Server components for pages/layouts; `"use client"` for interactive UI.
 - For hydration-sensitive components (e.g., color scheme toggle), use `useMounted` from `@mantine/hooks` to avoid server/client mismatch.
+- Biome rules: recommended + Next.js + React domains; `noUnknownAtRules` off (for Tailwind v4 `@theme`), `noArrayIndexKey` off.

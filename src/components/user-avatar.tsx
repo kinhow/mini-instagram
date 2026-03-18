@@ -1,5 +1,3 @@
-"use client";
-
 import type { MantineSize } from "@mantine/core";
 import { Avatar } from "@mantine/core";
 import { getInitials } from "@/utils/get-initials/get-initials";

@@ -1,5 +1,3 @@
-"use client";
-
 import { Text } from "@mantine/core";
 
 interface PostCardCaptionProps {

@@ -1,5 +1,3 @@
-"use client";
-
 import { Skeleton, Stack } from "@mantine/core";
 
 export function PostDetailLoading() {
