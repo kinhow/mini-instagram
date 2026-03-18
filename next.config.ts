@@ -7,8 +7,7 @@ const nextConfig: NextConfig = {
     root: path.join(__dirname),
   },
   images: {
-    loader: "custom",
-    loaderFile: "./src/utils/image-loader/image-loader.ts",
+    unoptimized: true,
   },
 };
 
